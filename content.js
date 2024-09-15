@@ -3,7 +3,7 @@ function filterMangas() {
     mangaItems.forEach(item => {
       const latestChapter = item.querySelector('.latest-chapter');
       if (latestChapter) {
-        const chapterNumber = parseInt(latestChapter.textContent.replace(/\D/g,''), 10);
+        const chapterNumber = parseFloat(latestChapter.textContent.replace(/[^\d.]/g, ''));
         if (chapterNumber < 20) {
           item.style.display = 'none';
         }
