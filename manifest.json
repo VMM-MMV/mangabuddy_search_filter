@@ -1,19 +1,23 @@
 {
-    "manifest_version": 2,
-    "name": "Manga Chapter Filter",
-    "version": "1.0",
-    "description": "Filters out manga with less than 20 chapters on mangabuddy.com",
-    "permissions": [
-      "https://mangabuddy.com/*"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://mangabuddy.com/*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Manga Chapter Filter",
+  "version": "1.0",
+  "description": "Filters manga based on the number of chapters.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
