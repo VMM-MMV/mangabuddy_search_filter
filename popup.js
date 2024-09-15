@@ -1,8 +1,17 @@
-document.getElementById('update-limit').addEventListener('click', () => {
+// When the popup loads, retrieve and display the saved chapter limit
+document.addEventListener('DOMContentLoaded', () => {
+    chrome.storage.sync.get('minChapterLimit', (data) => {
+      const savedLimit = data.minChapterLimit || 20; // Default to 20 if not set
+      document.getElementById('chapter-limit').value = savedLimit;
+    });
+  });
+  
+  // Update the chapter limit when the user clicks the "Update Limit" button
+  document.getElementById('update-limit').addEventListener('click', () => {
     const chapterLimit = parseInt(document.getElementById('chapter-limit').value, 10);
   
     if (!isNaN(chapterLimit)) {
-      // Save the limit to Chrome storage
+      // Save the new limit to Chrome storage
       chrome.storage.sync.set({ minChapterLimit: chapterLimit }, () => {
         console.log('Minimum chapter limit set to ' + chapterLimit);
       });
@@ -18,7 +27,7 @@ document.getElementById('update-limit').addEventListener('click', () => {
     }
   });
   
-  // Function to run in the content script
+  // Function to update manga filtering in the content script
   function updateMangaFilter(limit) {
     const mangaItems = document.querySelectorAll('.book-item');
     mangaItems.forEach(item => {
