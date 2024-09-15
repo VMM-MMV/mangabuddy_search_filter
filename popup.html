@@ -6,11 +6,16 @@
   <title>Manga Chapter Filter</title>
 </head>
 <body>
-  <h3>Set Minimum Chapters</h3>
-  <input type="number" id="chapter-limit" value="20" min="0" />
-  <button id="update-limit">Update Limit</button>
+  <h3>Set Chapter Limits</h3>
+  
+  <label for="min-chapter-limit">Minimum Chapters</label>
+  <input type="number" id="min-chapter-limit" value="20" min="0" />
+
+  <label for="max-chapter-limit">Maximum Chapters</label>
+  <input type="number" id="max-chapter-limit" value="100" min="0" />
+
+  <button id="update-limit">Update Limits</button>
 
   <script src="popup.js"></script>
 </body>
 </html>
-    
