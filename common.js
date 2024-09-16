@@ -8,8 +8,6 @@
         const chapterNumber = parseFloat(latestChapter.textContent.replace(/[^\d.]/g, ''));
         if (chapterNumber < minChapters || chapterNumber > maxChapters) {
           item.style.display = 'none';
-        } else {
-          item.style.display = ''; // Show the item if it meets the chapter limits
         }
       }
     });
