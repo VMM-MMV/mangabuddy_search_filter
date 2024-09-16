@@ -19,7 +19,7 @@
   function getChapterLimits(callback) {
     chrome.storage.sync.get(['minChapterLimit', 'maxChapterLimit'], (data) => {
       const minChapterLimit = data.minChapterLimit || 20;
-      const maxChapterLimit = data.maxChapterLimit || 100;
+      const maxChapterLimit = data.maxChapterLimit || 200;
       callback(minChapterLimit, maxChapterLimit);
     });
   }
