@@ -6,7 +6,7 @@ function saveChapterLimits(minChapterLimit, maxChapterLimit, callback) {
   });
 }
 
-// When the popup loads, retrieve and display the saved chapter limits
+// When the popup loads, retrieve and display the saved chapter limits.
 document.addEventListener('DOMContentLoaded', () => {
   MangaChapterFilter.getChapterLimits((minChapterLimit, maxChapterLimit) => {
     document.getElementById('min-chapter-limit').value = minChapterLimit;
