@@ -19,5 +19,8 @@ You can filter mangas to show only those with a chapter count between 20 and 70.
 3. **Enable Developer Mode** in the Extensions page.
 4. Click on **Load Unpacked** and select this project’s folder.
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
 ## Contributing
 You are encouraged to contribute to this project! Feel free to open issues, submit pull requests, or suggest improvements.
