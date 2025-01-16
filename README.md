@@ -13,7 +13,7 @@ You can filter mangas to show only those with a chapter count between 20 and 70.
 #### After:
 ![After Filter](https://github.com/user-attachments/assets/bbe62ed9-544a-481e-9b86-f0f28dd801a8)
   
-### Installation Instructions:
+### How to use:
 1. **Clone or Download** the repository.
 2. **Go to Extensions** on your browser.
 3. **Enable Developer Mode** in the Extensions page.
